@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pventafe
+
+datasource:
+  my_cnx_mysql:
+    url: jdbc:mysql://localhost:3306/factura2023
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    maximum-pool-size: 20
+    pool-name: "cnx-mysql"
+    auto-commit: true
