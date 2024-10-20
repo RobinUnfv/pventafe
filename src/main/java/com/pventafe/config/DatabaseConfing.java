@@ -11,9 +11,8 @@ import javax.sql.DataSource;
 
 @Configuration
 public class DatabaseConfing {
-
     @Bean
-    @ConfigurationProperties(prefix = "datasource.my_cnx_mysql")
+    @ConfigurationProperties(prefix = "datasource.my-oracle")
     public DataSource crudDataSource() {
         return DataSourceBuilder.create().build();
     }
