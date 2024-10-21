@@ -15,10 +15,10 @@ import java.util.Map;
 @Repository
 public class ComprobantePagoImpRepo implements IComprobantePagoRepo {
     @Autowired
-    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    private NamedParameterJdbcTemplate namedParameter;
     @Override
     public String emisionXml(String inputXml) {
-        SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(namedParameterJdbcTemplate)
+        SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(namedParameter.getJdbcTemplate())
                 .withProcedureName("FACTU.PR_COMPROBANTE_PAGO.EMISION_COMPRO_PAGO");
 
         //Parámetros de entra y salida
@@ -27,10 +27,10 @@ public class ComprobantePagoImpRepo implements IComprobantePagoRepo {
 
         simpleJdbcCall.declareParameters(inParam, outParam);
 
-        Map<String, Object> inParam = new HashMap<>();
-        inParam.put("cXMLIn",inputXml);
+        Map<String, Object> inParams = new HashMap<>();
+        inParams.put("cXMLIn",inputXml);
 
-        Map<String, Object> outParam = simpleJdbcCall.execute(inParam);
-        return (String) outParam.get("cXMLOut");
+        Map<String, Object> outParams = simpleJdbcCall.execute(inParams);
+        return (String) outParams.get("cXMLOut");
     }
 }
