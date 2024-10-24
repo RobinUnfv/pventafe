@@ -19,7 +19,7 @@ public class EmisionCompPagoServImpl implements IEmisionCompPagoServi {
     }
 
     @Override
-    public String convertirEmisionCpXml(EmisionComprobantePago emisioncp) {
+    public String emisionCpXmlInput(EmisionComprobantePago emisioncp) {
         StringBuilder sb = new StringBuilder();
         sb.append("<emisionComprobantePago>");
         sb.append(" <arpfoe>");
@@ -115,7 +115,7 @@ public class EmisionCompPagoServImpl implements IEmisionCompPagoServi {
             sb.append("    <arpfol>");
             sb.append("       <noCia>");sb.append(arpfol.getNoCia());sb.append("</noCia>");
             sb.append("       <noOrden></noOrden>");
-            sb.append("       <grupo></grupo>");
+            sb.append("       <grupo>00</grupo>");
             sb.append("       <noCliente>");sb.append(arpfol.getNoCliente());sb.append("</noCliente>");
             sb.append("       <noArti>");sb.append(arpfol.getNoArti());sb.append("</noArti>");
             sb.append("       <tipoArti>");sb.append(arpfol.getTipoArti());sb.append("</tipoArti>");
@@ -166,4 +166,11 @@ public class EmisionCompPagoServImpl implements IEmisionCompPagoServi {
 
         return sb.toString();
     }
+
+    @Override
+    public EmisionComprobantePagoResponse emisionCpXmlOut(String xmlOut) {
+        return null;
+    }
+
+
 }

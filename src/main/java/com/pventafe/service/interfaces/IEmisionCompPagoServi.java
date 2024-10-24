@@ -6,5 +6,6 @@ import com.pventafe.model.EmisionComprobantePagoResponse;
 public interface IEmisionCompPagoServi {
 
     public EmisionComprobantePagoResponse emisionCompPago(EmisionComprobantePago emisioncp);
-    public String convertirEmisionCpXml(EmisionComprobantePago emisioncp);
+    public String emisionCpXmlInput(EmisionComprobantePago emisioncp);
+    public EmisionComprobantePagoResponse emisionCpXmlOut(String xmlOut);
 }
