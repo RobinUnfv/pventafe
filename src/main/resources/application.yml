@@ -2,8 +2,11 @@ spring:
   application:
     name: pventafe
 
+
 server:
   port: 8088
+  servlet:
+    context-path: /pventafe/api/v1
 
 datasource:
   my-oracle:

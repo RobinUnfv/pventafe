@@ -1,10 +1,8 @@
-package com.pventafe.persistence.entity;
+package com.pventafe.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -23,7 +21,7 @@ public class Arpfol {
     private double cantEntreg;
     private double cantAsignada;
     private double cantReasignada;
-    private Date fechaRegistro;
+    private String fechaRegistro;
     private double precio;
     private double totLinea;
     private String estado;

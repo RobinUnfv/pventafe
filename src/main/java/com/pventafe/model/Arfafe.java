@@ -1,4 +1,4 @@
-package com.pventafe.persistence.entity;
+package com.pventafe.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

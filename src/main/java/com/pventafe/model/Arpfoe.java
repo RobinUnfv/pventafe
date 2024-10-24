@@ -1,10 +1,9 @@
-package com.pventafe.persistence.entity;
+package com.pventafe.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -19,12 +18,12 @@ public class Arpfoe {
     private String noVendedor;
     private String codTped;
     private String codFpago;
-    private Date fRecepcion;
-    private Date fechaRegistro;
-    private Date fAprobacion;
-    private Date fechaEntrega;
-    private Date fechaEntregaReal;
-    private Date fechaVence;
+    private String fRecepcion;
+    private String fechaRegistro;
+    private String fAprobacion;
+    private String fechaEntrega;
+    private String fechaEntregaReal;
+    private String fechaVence;
     private String tipoPrecio;
     private String moneda;
     private double subTotal;
@@ -89,7 +88,7 @@ public class Arpfoe {
     private String contNeto;
     private String indProforma1;
     private double aCta;
-    private Date entrega;
+    private String entrega;
     private String horaEntrega;
     private String indPideLote;
     private String motConting;
