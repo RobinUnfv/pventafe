@@ -1,12 +1,10 @@
 package com.pventafe.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Getter
+@Setter
 public class EmisionComprobantePago {
     private Arpfoe arpfoe;
     private Arfafe arfafe;

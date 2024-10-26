@@ -5,10 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
 @NoArgsConstructor
-@Setter
+@AllArgsConstructor
 @Getter
-public class EmisionCpResponseError extends EmisionComprobantePagoResponse {
-    private ResEmisionCp resEmisionCp;
+@Setter
+public class Prueba {
+    private Arfafe arfafe;
 }
